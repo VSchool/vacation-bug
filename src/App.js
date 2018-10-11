@@ -7,32 +7,29 @@ class App extends Component {
     this.vacationSpots = [
         {
           place: "Meridian, Idaho",
-          price: "$40",
+          price: 40,
           timeToGo: "Spring"
         },{
           place: "Cancun",
-          price: "$900",
+          price: 900,
           timeToGo: "Winter"
         },{
           place: "China",
-          price: "$1200",
+          price: 1200,
           timeToGo: "Fall"
         },{
           place: "Russia",
-          price: "$1100",
+          price: 1100,
           timeToGo: "Summer"
         },{
           place: "Lebanon",
-          price: "$400",
+          price: 400,
           timeToGo: "Spring"
         }
       ];
   }
   render(){
     const panels = vacationSpots.map(spot => {
-      const hollowPrice = spot.price.split('');
-      hollowPrice.shift();
-      let price = hollowPrice.join('');
       if (price < 500){
         price = spot.price;
       }else if (price > 500 || price < 1000){
